@@ -1,0 +1,256 @@
+body{
+    color: white;
+}
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 7px;
+    margin: 5px auto;
+    color: black;
+    position: sticky;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ 
+.name a{
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+}
+
+.name:hover{
+    color: #18d26e;
+}
+
+.header{
+    padding: 5px;
+    gap: 6rem;
+}
+
+.header a{
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: black;
+    margin: 4px;
+}
+
+.header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0%;
+    background-color: #18d26e;
+    transition: width 0.9s ease;
+  }
+
+.header:hover{
+    color: #18d26e;
+}
+
+.header a:hover::after {
+    width: 100%;
+  }
+
+  .media a{
+    margin: 4px;
+  }
+
+  .media a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0%;
+    background-color: #18d26e;
+    transition: width 0.9s ease;
+  }
+
+  .media:hover{
+    color: #18d26e;
+  }
+
+  .footer{
+    display: block;
+    color: black;
+    justify-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer .craft {
+    margin-top: 1rem;
+  }
+  
+  .footer .media {
+    margin-top: 1rem;
+  }
+
+  .craft a{
+    text-decoration: none;
+    color: #18d26e;
+  }
+
+  .me{
+    background-image: url(page.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+  }
+
+  .me-text{
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    color: black;
+  }
+
+  .me button{
+    background-color: #18d26e;
+    border: none;
+    padding: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 30px;
+  }
+
+  .me button a{
+    color: white;
+    text-decoration: none;
+  }
+
+.me button a:hover{
+    transition: 0.9s ease;
+}
+
+.about {
+    padding: 40px 20px;
+    background: #f9f9f9;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    font-size: larger;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 20rem;
+    align-items: flex-start;
+    justify-content: center;
+    color: black;
+    font-size: larger;
+  }
+  
+  .about-image img {
+    width: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 250px;
+    color: black;
+    font-size: larger;
+  }
+  
+  .about-text h3 {
+    color: #173b6c;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-text .intro {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .info-lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: larger;
+  }
+  
+  .info-lists ul {
+    list-style: georgian;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    font-size: larger;
+  }
+  
+  .info-lists li {
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-size: large;
+  }
+  
+  .info-lists li strong {
+    font-weight: 600;
+    color: #173b6c;
+  }
+  
+  .skills{
+    color: black;
+    justify-items: center;
+  }
+
+  .skills {
+    background: #f4f4f4;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .skills-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill-name {
+    font-weight: 600;
+    color: #173b6c;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .progress {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: #18d26e;
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    border-radius: 5px 0 0 5px;
+    transition: width 1s ease-in-out;
+  }
+  
