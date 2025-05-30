@@ -114,6 +114,9 @@ body{
     font-size: larger;
     justify-items: center;
     color: white;
+    top: 200px;
+    left: 70px;
+    color: black;
   }
 
   .me button{
