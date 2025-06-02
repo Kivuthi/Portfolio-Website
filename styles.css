@@ -272,7 +272,7 @@ body{
     transition: width 1s ease-in-out;
   }
 
-  .resume {
+.resume {
   padding: 60px 0;
   background: #f7f7f7;
 }
@@ -281,12 +281,13 @@ body{
   display: flex;
   flex-wrap: wrap;
   gap: 0px;
+  margin-left: 75px;
 }
 
 .resume .left-column,
 .resume .right-column {
   flex: 0.6;
-  min-width: 200px;
+  min-width: 100px;
 }
 
 .resume-title {
@@ -346,7 +347,6 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 2px solid white;
   gap: 1px;
   transition: 0.5s;
 }
@@ -357,4 +357,49 @@ body{
 
 .achievement p{
   font-size: 2.6rem;
+}
+
+.services{
+  color: black;
+  margin: 5rem;
+}
+
+.services-header h1{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card{
+  box-shadow: 0 2px 12px rgba(38, 158, 158, 0.1);
+  border: 1px solid #18d26e;
+  display: inline-flex;
+  max-width: 600px;
+  margin: 11px auto;
+  margin-left: 100px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.service-icon{
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.service-blog h2 {
+  margin-bottom: 10px;
+}
+
+.service-blog p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.service-card:hover{
+background-color: #18d26e;
+transform: translateY(-5px);
+transition: transform 0.5s ease, box-shadow 0.3s ease;
+cursor: pointer;
 }
