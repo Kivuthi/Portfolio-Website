@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kivuthi</title>
-    <link rel="icon" type="image/png" href="page.jpg" style="border-radius: 45p0x;">
+    <link rel="icon" type="image/png" href="page.jpg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -20,6 +20,8 @@
             <a href="#resume">Resume</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
+            <!-- <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button> -->
+
            </nav>
         </div>
 
@@ -34,7 +36,7 @@
     <div class="me">
        <div class="me-text">
         <h1 style="color: white;">KIVUTHI DENNIS</h1>
-        <H3 style="color: white;">I'm a professional software Engineer from Kenya</H3>
+        <H3 style="color: white;">I'm a professional software engineer from Kenya</H3>
         <button type="button"><a href="#about">ABOUT ME</a></button>
        </div>
     </div>
@@ -81,7 +83,7 @@
         </div>
       </section>
 
-      <section id="'skills" class="skills">
+      <section id="skills" class="skills">
 
         <div class="container">
 
@@ -182,13 +184,6 @@
                   <p>Kenya Certificate of Secondary School</p>
                 </div>
               </div>
-
-              <section class="servises" id="services">
-                <div class="service-header">
-                  <h1>SERVICES</h1>
-                  <P>As a Software Engineer I offer all </P>
-                </div>
-              </section>
          
               <div class="right-column">
                 <h3 class="resume-title">Professional Experience</h3>
@@ -317,11 +312,11 @@
           <div class="contact-blog">
 
             <div class="handles">
-              <p>Ready and Looking for any collaborations 
-                <p>Reach out in any social media or</p>
-                <p>Hit my Phone or Email</p>
-              </p>
-              <p>officialdee77@gmail,com</p>
+              <p>Ready and Looking for any collaborations</p>
+              <p>Reach out in any social media or</p>
+              <p>Hit my Phone or Email</p>
+
+              <p>officialdee77@gmail.com</p>
               <p>0745392382</p>
               <p>Mombasa, Kenya</p>
             </div>
@@ -358,10 +353,31 @@
         <div class="media">
             <a href="https://www.instagram.com/rich.ards.son"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://x.com/Gabitech_LTD"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/Kivuthi"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/Kivuthi" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </footer>
    
+    <script>
+      const toggle = document.getElementById('darkModeToggle');
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        // Optionally save preference
+        if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    
+      // Load saved theme
+      window.onload = () => {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+        }
+      };
+    </script>
+    
 </body>
 </html>
