@@ -1,383 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kivuthi</title>
-    <link rel="icon" type="image/png" href="page.jpg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kivuthi Portfolio</title>
+  <link rel="icon" type="image/png" href="page.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .typing::after {
+      content: "|";
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
 </head>
-<body>
-    <section id="home" class="hero">
 
-        <div class="name"><a href="index.html">KIVUTHI</a></div>
+<body class="bg-gray-900 text-gray-100 font-sans transition-colors duration-500">
 
-         <div class="header">
-           <nav class="nav-kinks">
-            <a href="index.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#resume">Resume</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-            <!-- <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button> -->
+  <!-- Hero / Navbar -->
+  <section id="home" class="min-h-screen flex flex-col justify-between bg-gradient-to-b from-gray-950 via-gray-900 to-black">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-6">
+      <div class="text-3xl font-bold tracking-widest">
+        <a href="#home" class="text-white">KIVUTHI</a>
+      </div>
 
-           </nav>
-        </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8 text-lg text-gray-300">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#resume" class="hover:text-white">Resume</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
 
-        <div class="media">
-            <a href="https://www.instagram.com/rich.ards.son"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/Gabitech_LTD"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/Kivuthi"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </section>
+      <!-- Icons -->
+      <div class="flex items-center space-x-4">
+        <button id="themeToggle" class="text-2xl">🌙</button>
+        <button id="menuToggle" class="text-2xl md:hidden"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
 
-    <div class="me">
-       <div class="me-text">
-        <h1 style="color: white;">KIVUTHI DENNIS</h1>
-        <H3 style="color: white;">I'm a professional software engineer from Kenya</H3>
-        <button type="button"><a href="#about">ABOUT ME</a></button>
-       </div>
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="hidden flex-col items-center bg-gray-800 md:hidden">
+      <a href="#home" class="py-2 w-full text-center border-b border-gray-700 hover:bg-gray-700">Home</a>
+      <a href="#about" class="py-2 w-full text-center border-b border-gray-700 hover:bg-gray-700">About</a>
+      <a href="#resume" class="py-2 w-full text-center border-b border-gray-700 hover:bg-gray-700">Resume</a>
+      <a href="#skills" class="py-2 w-full text-center border-b border-gray-700 hover:bg-gray-700">Skills</a>
+      <a href="#services" class="py-2 w-full text-center border-b border-gray-700 hover:bg-gray-700">Services</a>
+      <a href="#contact" class="py-2 w-full text-center hover:bg-gray-700">Contact</a>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="text-center flex-grow flex flex-col justify-center items-center px-4">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">KIVUTHI DENNIS</h1>
+      <h3 id="typingText" class="text-xl md:text-2xl text-gray-300 typing"></h3>
+      <a href="#about" class="bg-white text-black px-6 py-3 mt-6 rounded-full font-semibold hover:bg-gray-200 transition">ABOUT ME</a>
     </div>
 
-      <section id="about" class="about">
-        <div class="container">
-          <div class="section-title">
-            <h2>ABOUT</h2>
-            <p>Learner</p>
-          </div>
-          <div class="about-content">
-            <div class="about-image">
-              <img src="me.jpeg" alt="Dennis">
-            </div>
-            <div class="about-text">
-              <h3>Web Developer & Designer</h3>
-              <p class="intro">Passionate about building digital experiences.</p>
-              <div class="info-lists">
-                <ul>
-                  <li><strong>Birthday:</strong> <span>2 December 2005</span></li>
-                  <li><strong>Website:</strong> <span>www.kivuthi.com</span></li>
-                  <li><strong>Phone:</strong> <span>+254 745 392 382</span></li>
-                  <li><strong>City:</strong> <span>Mombasa, Kenya</span></li>
-                </ul>
-                <ul>
-                  <li><strong>Age:</strong> <span>19</span></li>
-                  <li><strong>Degree:</strong> <span>Bachelor</span></li>
-                  <li><strong>Email:</strong> <span>officialdee77@gmail.com</span></li>
-                  <li><strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-              <div class="about-paragraph">
-                <p>👋 Hi, I am Dennis Kivuthi, a passionate web developer and aspiring 
-                  software engineer based in Kenya. I specialize in front-end development 
-                  using HTML, CSS, JavaScript, and React, and I am continually 
-                  expanding my skills in backend technologies and version control with
-                   Git & GitHub. I'm dedicated to building clean, responsive, 
-                   and user-friendly web applications that deliver meaningful 
-                   digital experiences. When I'm not coding, I enjoy learning new tools, 
-                   collaborating on projects, and exploring innovative tech solutions.</p>
-              </div>
-            </div>
+    <!-- Social Icons -->
+    <div class="flex justify-center space-x-5 text-xl text-gray-400 pb-10">
+      <a href="https://www.instagram.com/rich.ards.son" class="hover:text-pink-500"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://x.com/Gabitech_LTD" class="hover:text-gray-200"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://github.com/Kivuthi" class="hover:text-white"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/feed/" class="hover:text-blue-400"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12 text-center">
+      <h2 class="text-4xl font-bold mb-8">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <img src="me.jpeg" alt="Dennis" class="w-64 h-64 object-cover rounded-2xl shadow-lg" />
+        <div class="text-left max-w-lg">
+          <p class="mb-4">👋 Hi, I’m <strong>Dennis Kivuthi</strong> — a passionate software engineer from Kenya. I love turning complex problems into elegant solutions using clean, efficient code.</p>
+          <p>My focus is on crafting responsive, scalable, and secure web applications. I enjoy teamwork, learning new tech, and pushing boundaries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-center mb-10">Resume</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-white">Education</h3>
+          <div class="bg-gray-900 p-5 rounded-xl mb-4">
+            <h4 class="font-semibold">Bachelor of Computer Science</h4>
+            <p class="text-gray-400">Technical University of Mombasa (2020 - 2024)</p>
+            <p class="text-gray-300 mt-2">Focused on software development, systems design, and problem solving.</p>
           </div>
         </div>
-      </section>
-
-      <section id="skills" class="skills">
-
-        <div class="container">
-
-            <div class="skills-title">
-                <h1>SKILLS</h1>
-                <p>My technical level in various areas</p>
-            </div>
-
-            <div class="skills-content">
-              <div class="skills-content-a">
-                <div class="skill">
-                  <span class="skill-name">HTML</span>
-                  <div class="progress">
-                      <div class="progress-bar" style="width: 90%;">90%</div>
-                  </div>
-              </div>
-
-              <div class="skill">
-                  <span class="skill-name">CSS</span>
-                  <div class="progress">
-                      <div class="progress-bar" style="width: 98%;">98%</div>
-                  </div>
-              </div>
-
-              <div class="skill">
-                  <span class="skill-name">PHP</span>
-                  <div class="progress">
-                      <div class="progress-bar" style="width: 1%;">1%</div>
-                  </div>
-              </div>
-              </div>
-               
-              <div class="skills-content-b">
-                <div class="skill">
-                  <span class="skill-name">BOOTSTRAP</span>
-                  <div class="progress">
-                      <div class="progress-bar" style="width: 5%;">5%</div>
-                  </div>
-              </div>
-
-              <div class="skill">
-                  <span class="skill-name">JAVASCRIPT</span>
-                  <div class="progress">
-                      <div class="progress-bar" style="width: 1%;">1%</div>
-                  </div>
-              </div>
-
-              <div class="skill">
-                  <span class="skill-name">PYTHON</span>
-                  <div class="progress">
-                      <div class="progress-bar" style="width: 1%;">1%</div>
-                  </div>
-              </div>
-              </div>  
-        </div>
-      </section>
-
-        <section id="resume" class="resume">
-          <div class="container">
-            <div class="section-title">
-              <h2 style="font-size: 2rem;">RESUME</h2>
-              <p style="font-size: 1.2rem">Check My Resume</p>
-            </div>
-        
-            <div class="resume-content">
-              <div class="left-column">
-                <h3 class="resume-title">Summary</h3>
-                <div class="resume-item">
-                  <h4>Musyoka Dennis Kivuthi</h4>
-                  <p><em>Currently studying computer SCience in Kabarak University. <br>
-                  Ready for any collaborations across</em></p>
-                  <ul>
-                    <li>Location: Mombasa, Kenya</li>
-                    <li>Email: officialdee77@gmail.com</li>
-                    <li>Phone: +254 745 392 382</li>
-                  </ul>
-                </div>
-        
-                <h3 class="resume-title">Education</h3>
-                <div class="resume-item">
-                  <h4>Computer Science</h4>
-                  <h5>2024-</h5>
-                  <p><em>Kabarak University, Nakuru</em></p>
-                  <p>Undergraduate in Computer Science</p>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Basic Computer</h4>
-                  <h5>2023</h5>
-                  <p><em>Blu Seren, Mombasa</em></p>
-                  <p>Certificate in Computer</p>
-                </div>
-
-                <div class="resume-item">
-                  <h4>High School Education</h4>
-                  <h5>2019-2022</h5>
-                  <p><em>Mbooni Boys' ,Makueni</em></p>
-                  <p>Kenya Certificate of Secondary School</p>
-                </div>
-              </div>
-         
-              <div class="right-column">
-                <h3 class="resume-title">Professional Experience</h3>
-                <div class="resume-item">
-                  <h4>Freelancer</h4>
-                  <h5>2025 - Present</h5>
-                  <p><em>Online</em></p>
-                  <ul>
-                    <li>Creating responsive websites e.g Gabitech Investments</li>
-                    <li>Creating apps</li>
-                  </ul>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Cyber Handling</h4>
-                  <h5>2023 - Present</h5>
-                  <p><em>Blu Seren, Mombasa</em></p>
-                  <ul>
-                    <li>Attending to people who need Computer Services</li>
-                    <li>Teaching new students basic computer knowledge</li>
-                  </ul>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Clerk</h4>
-                  <h5>2023 - Present</h5>
-                  <p><em>Kawala Freighters, Mombasa</em></p>
-                  <ul>
-                    <li>Clearing vehicles.</li>
-                    <li>Clearing loose cargo.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="achievements">
-
-          <div class="achievement">
-            <h1>2+</h1>
-            <p>Years of Experience</p>
-          </div>
-
-          <div class="achievement">
-            <h1>10+</h1>
-            <p>Happy Clients</p>
-          </div>
-
-          <div class="achievement">
-            <h1>30+</h1>
-            <p>Complete Projects</p>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-white">Experience</h3>
+          <div class="bg-gray-900 p-5 rounded-xl mb-4">
+            <h4 class="font-semibold">Software Developer (Intern)</h4>
+            <p class="text-gray-400">Gabitech LTD — 2024</p>
+            <p class="text-gray-300 mt-2">Built Laravel-based management systems and responsive user dashboards.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <section id="services" class="services">
-          <div class="services-header">
-            <h1>SERVICES</h1>
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-center mb-10">Skills</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p>HTML</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 90%"></div>
           </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-mobile"></i></div>
-            <div class="service-blog">
-              <h2>Responsive Web Development</h2>
-              <p>I'm a front-end web designer and developer with a strong focus on 
-                responsive web design, using HTML, CSS, and React to build modern, 
-                user-friendly websites that work flawlessly across all screen sizes.</p>
-            </div>
+          <p>HTML</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 90%"></div>
           </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-            <div class="service-blog">
-              <h2>Front End Web Application Development</h2>
-              <p>Experienced in building clean, responsive, and interactive websites using 
-                HTML, CSS, and React. I focus on creating seamless user experiences that work
-                 beautifully across all devices—from smartphones to large desktop screens.</p>
-            </div>
+          <p>Tailwind</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 90%"></div>
           </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
-            <div class="service-blog">
-              <h2>Database Development and Management</h2>
-              <p>Strong knowledge in database development and management using MySQL and phpMyAdmin.
-                 I help design, build, and manage secure, efficient databases to support dynamic 
-                 websites and web applications.</p>
-            </div>
+          <p>PHP</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 70%"></div>
           </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-            <div class="service-blog">
-              <h2>API Development</h2>
-              <p>I also specialize in API development, building robust and secure back-end 
-                systems that allow web applications to communicate efficiently. Using RESTful principles</p>
-            </div>
+          <p>Laravel</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 80%"></div>
           </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-user-plus"></i></div>
-            <div class="service-blog">
-              <h2>Team Collaboration</h2>
-              <p>Strong team collaboration abilities to every project. 
-                I have worked in both independent and team-based environments, contributing to 
-                shared codebases, participating in agile workflows, and communicating clearly with designers, 
-                developers, and clients</p>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-bug-slash"></i></div>
-            <div class="service-blog">
-              <h2>Debugging & Problem Solving</h2>
-              <p> Good at identifying issues in code, design, or functionality. Whether it is a front-end layout glitch, 
-                a database error, or a broken API call. I deliver efficient, maintainable solutions</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="Contact-section">
-          <div class="contact-header">
-            <h1>GET IN TOUCH</h1>
-          </div>
-
-          <div class="contact-blog">
-
-            <div class="handles">
-              <p>Ready and Looking for any collaborations</p>
-              <p>Reach out in any social media or</p>
-              <p>Hit my Phone or Email</p>
-
-              <p>officialdee77@gmail.com</p>
-              <p>0745392382</p>
-              <p>Mombasa, Kenya</p>
-            </div>
-
-            <div class="contact-me">
-              <form class="contact-form" action="https://formspree.io/f/xvgrzdqb" method="POST">
-                
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
-            
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="client@gmail.com" required>
-            
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="+254 712 345 678">
-            
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Type your message..." required></textarea>
-            
-                <button type="submit">Send</button>
-              </form>
-            </div>            
-          </div>
-        </section>
-
-        <hr>
-        
-    <footer class="footer">
-        &copy;Copyright Kivuthi All Rights Reserved 
-
-        <div class="craft">
-            Craft by <a href="">Kivuthi</a>
         </div>
-        <div class="media">
-            <a href="https://www.instagram.com/rich.ards.son"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/Gabitech_LTD"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/Kivuthi" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+        <div>
         </div>
-    </footer>
-   
-    <script>
-      const toggle = document.getElementById('darkModeToggle');
-      toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        // Optionally save preference
-        if (document.body.classList.contains('dark-mode')) {
-          localStorage.setItem('theme', 'dark');
+        <div>
+          <p>JavaScript</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-green-500 h-2.5 rounded-full" style="width: 20%"></div>
+          </div>
+          <p>React</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-green-500 h-2.5 rounded-full" style="width: 10%"></div>
+          </div>
+          <p>Python</p>
+          <div class="w-full bg-gray-800 rounded-full h-2.5 mb-4">
+            <div class="bg-purple-500 h-2.5 rounded-full" style="width: 10%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6 md:px-12 text-center">
+      <h2 class="text-4xl font-bold mb-10">Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-6 rounded-xl hover:-translate-y-2 transition">
+          <i class="fa-solid fa-code text-4xl text-blue-400 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-gray-400">Building fast, responsive, and secure websites with Laravel & TailwindCSS.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl hover:-translate-y-2 transition">
+          <i class="fa-solid fa-laptop-code text-4xl text-yellow-400 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+          <p class="text-gray-400">Crafting intuitive and user-centered interface designs.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl hover:-translate-y-2 transition">
+          <i class="fa-solid fa-server text-4xl text-green-400 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">API Integration</h3>
+          <p class="text-gray-400">Developing robust backend APIs and connecting third-party services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-10">Contact Me</h2>
+    <form class="max-w-md mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-100" required>
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-100" required>
+      <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-100" required></textarea>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-md font-semibold">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-700 py-6 text-center text-gray-400 text-sm bg-gray-800">
+    &copy; 2025 Kivuthi All Rights Reserved
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'light') html.classList.add('dark');
+
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+    });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Typing Effect
+    const typingText = document.getElementById("typingText");
+    const texts = ["I'm a Software Engineer.", "I'm a Laravel Developer.", "I build digital experiences."];
+    let i = 0, j = 0, currentText = "", isDeleting = false;
+
+    function type() {
+      if (i < texts.length) {
+        currentText = texts[i];
+        typingText.textContent = currentText.substring(0, j);
+
+        if (!isDeleting && j < currentText.length) {
+          j++;
+          setTimeout(type, 100);
+        } else if (isDeleting && j > 0) {
+          j--;
+          setTimeout(type, 50);
         } else {
-          localStorage.setItem('theme', 'light');
+          if (!isDeleting) {
+            setTimeout(() => (isDeleting = true), 1000);
+          } else {
+            isDeleting = false;
+            i = (i + 1) % texts.length;
+          }
+          setTimeout(type, 100);
         }
-      });
-    
-      // Load saved theme
-      window.onload = () => {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-          document.body.classList.add('dark-mode');
-        }
-      };
-    </script>
-    
+      }
+    }
+    type();
+  </script>
 </body>
 </html>

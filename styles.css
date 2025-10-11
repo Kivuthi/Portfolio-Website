@@ -45,7 +45,7 @@ body{
   .me-text {
     left: 70px;
     top: 200px;
-    font-size: medium;
+    font-size: 3rem;
   }
 }
 
@@ -66,21 +66,24 @@ button{
 }
 
 .hero{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    justify-items: center;
-    padding: 7px;
-    margin: 5px auto;
-    color: black;
-    position: sticky;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ justify-items: center;
+ padding: 7px;
+ top: 0;
+ background-color: var(--bg-color);
+ margin: 5px auto;
+ color: black;
+ position: sticky;
+ z-index: 999;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
  
 .name a{
-    text-decoration: none;
-    font-size: xx-large;
-    color: black;
+text-decoration: none;
+ font-size: xx-large;
+ color: black;
 }
 
 .name:hover{
@@ -174,7 +177,7 @@ button{
     position: absolute;
     top: 50px;
     left: 70px;
-    font-size: larger;
+    font-size: 1.4rem;
     justify-items: center;
     top: 200px;
     left: 70px;
@@ -275,11 +278,6 @@ button{
   .info-lists li strong {
     font-weight: 600;
     color: #173b6c;
-  }
-  
-  .skills{
-    color: black;
-    justify-items: center;
   }
 
   .skills {
@@ -441,6 +439,14 @@ button{
   margin-top: 3rem;
 }
 
+.service-container{
+  padding: 4rem auto;
+  justify-content: space-evenly;
+  justify-content: center;
+  align-content: space-between;
+  background-color: #173b6c;
+}
+
 .service-card{
   box-shadow: 0 2px 12px rgba(38, 158, 158, 0.1);
   border: 1px solid #18d26e;
@@ -448,13 +454,10 @@ button{
   flex-direction: column;
   max-width: 600px;
   margin: 11px auto;
-  margin-left: 20px auto;
-  margin-right: 20px auto;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  justify-content: space-between;
-  /* justify-content: center; */
+  justify-content: space-evenly;
 }
 
 .service-icon{
